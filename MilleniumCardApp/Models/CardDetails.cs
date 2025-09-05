@@ -18,4 +18,11 @@ public enum CardType
     Credit
 }
 
+public enum CardOnPinBehaviour
+{
+    Default,
+    TrueOnPin,
+    FalseOnPin
+}
+
 public record CardDetails(string CardNumber, CardType CardType, CardStatus CardStatus, bool IsPinSet);

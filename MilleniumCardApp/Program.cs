@@ -1,3 +1,6 @@
+using Microsoft.Extensions.Caching.Memory;
+using MilleniumCardApp.API.Interfaces;
+using MilleniumCardApp.API.Providers;
 using MilleniumCardApp.API.Services;
 using MilleniumCardApp.Controllers;
 
@@ -5,6 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+// enforce enums to be returned as strings
 builder.Services.AddControllers()
     .AddJsonOptions(options =>
     {
@@ -14,6 +18,10 @@ builder.Services.AddControllers()
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddSingleton<IMemoryCache, MemoryCache>();
+builder.Services.AddSingleton<ICardActionsRepository, CardActionsRepository>();
+
 builder.Services.AddSingleton<CardService>();
 builder.Services.AddSingleton<CardController>();
 

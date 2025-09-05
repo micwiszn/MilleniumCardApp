@@ -10,9 +10,4 @@
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2"/>
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="API\Interfaces\" />
-      <Folder Include="API\Responses\" />
-    </ItemGroup>
-
 </Project>
