@@ -1,14 +1,14 @@
 using Microsoft.Extensions.Caching.Memory;
 using MilleniumCardApp.API.Interfaces;
-using MilleniumCardApp.API.Providers;
+using MilleniumCardApp.API.Repositories;
 using MilleniumCardApp.API.Services;
-using MilleniumCardApp.Controllers;
+using MilleniumCardApp.API.Controllers;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-// enforce enums to be returned as strings
+// enforce enums to be returned as string
 builder.Services.AddControllers()
     .AddJsonOptions(options =>
     {

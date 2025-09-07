@@ -1,5 +1,5 @@
 ﻿using MilleniumCardApp.API.Interfaces;
-using MilleniumCardApp.API.Providers;
+using MilleniumCardApp.API.Repositories;
 using MilleniumCardApp.Models;
 
 namespace MilleniumCardApp.API.Services;

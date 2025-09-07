@@ -1,8 +1,9 @@
 ﻿using Microsoft.Extensions.Caching.Memory;
+using MilleniumCardApp.API.Providers;
 using MilleniumCardApp.API.Interfaces;
 using MilleniumCardApp.Models;
 
-namespace MilleniumCardApp.API.Providers;
+namespace MilleniumCardApp.API.Repositories;
 
 public class CardActionsRepository : ICardActionsRepository
 {
